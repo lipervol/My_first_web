@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>个人主页</title>
+<script>
+function init(){
+    setInterval("changeImg()",1800);
+}
+var i=1;
+function changeImg(){
+    i++;
+    document.getElementById("one").src=i+".png";
+    if(i==5){
+        i=0;
+    }
+}
+</script>
+<style>
+body
+{
+background-image: url("2.jpeg");
+style=" background-repeat:no-repeat ;
+background-size:100% 100%;
+background-attachment: fixed;
+}
+h3
+{
+    color:rgb(255, 255, 255);
+}
+#annu
+{
+    background-color:aliceblue;
+    border: none;
+    color:black;
+    padding: 6px 20px;
+    font-size: 100%;
+    font-family:inherit;
+    font-weight: bolder;
+}
+#zhanshi
+{
+border:none;
+width: 855px;
+height: 500px;
+margin: auto;
+text-align: center;
+}
+#user{
+    color: aliceblue;
+}
+#passwd{
+    color: aliceblue;
+}
+#tt{
+    margin-left: 40%
+}
+#logon
+{
+    color: aliceblue;
+}
+</style>
+</head>
+<body onload="init()">
+<img src="SNC.bmp" width="190" height="60" align="left">
+<div align="center">
+<h1 align="left" id=tt>Hello World！！！！</h1>
+<h3>这是我的第一个网站</h3>
+<div id=zhanshi>
+    <img id=one src="1.png" height="100%" width="100%">
+</div>
+<br/>
+<form action="login.php" method="post">
+    <tr>
+        <b id=user>用户名:</b>
+        <td><input type="text" name="userid" border=none /></td> 
+    </tr>
+    <tr>
+        <b id=passwd>密码:</b>
+        <td><input type="password" name="passwd" border=none /></td>
+    </tr>
+    <br/>
+    <br/>
+    <input id=annu type="submit" name="submit" value="登陆">
+    <br/>
+    <a href="logon.html" id=logon>还没有账号？</a>
+</form>
+<br/>
+</div>
+</body>
+</html>
